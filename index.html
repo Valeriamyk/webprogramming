@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -10,6 +11,11 @@
         <!-- Ліва колонка -->
         <div class="sidebar">
             <h1>Valeriia Mykhailyk</h1>
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: mykhailykvaleriia@gmail.com</li>
+                <li>Phone: +380682049242</li>
+            </ul>
 
             <h2>Hard Skills</h2>
             <ul>
@@ -28,15 +34,6 @@
                 <li>Time Management</li>
                 <li>Adaptability and Continuous Learning</li>
             </ul>
-        </div>
-
-        <!-- Права колонка -->
-        <div class="main">
-            <h2>Contact</h2>
-            <ul>
-                <li>Email: mykhailykvaleriia@gmail.com</li>
-                <li>Phone: +380682049242</li>
-            </ul>
 
             <h2>Languages</h2>
             <ul>
@@ -44,6 +41,11 @@
                 <li>English – Upper-Intermediate</li>
             </ul>
 
+            <button id="themeSwitchBtn">Switch Theme</button>
+        </div>
+
+        <!-- Права колонка -->
+        <div class="main">
             <h2>Education</h2>
             <h3>National University 'Lviv Polytechnic' – BS in Cybersecurity</h3>
             <h3>2022 – now (Expected to graduate in 2026)</h3>
@@ -55,10 +57,38 @@
                 <li>Teamwork: Hands-on experience collaborating on group projects during university studies.</li>
             </ul>
 
+            <h2>Comments</h2>
+            <div id="comments"></div> <!-- Коментарі з сервера -->
         </div>
     </div>
+
+    <!-- Футер для localStorage -->
+    <footer>
+        <div id="localStorageData"></div>
+    </footer>
+
+    <!-- Кнопка для зміни теми -->
+
+    <!-- Модальне вікно для форми зворотного зв'язку -->
+    <div id="feedbackModal" class="modal" hidden>
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <form action="https://formspree.io/f/xdkgowra" method="POST">
+                <h2>Feedback Form</h2>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="phone">Phone:</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
 
